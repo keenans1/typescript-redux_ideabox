@@ -2,13 +2,14 @@ import { clear } from "console";
 import React, { useState } from "react";
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import { setTitle, setDescription } from './formSlice';
+import { addIdea } from './appSlice';
 
-interface formProps {
-    addIdea: Function,
-    name: string
-}
+// interface formProps {
+//     addIdea: Function,
+//     name: string
+// }
 
-const Form = (props: formProps) => {
+const Form = () => {
 
     // const {title, setTitle} = useState('')
 
@@ -23,7 +24,7 @@ const Form = (props: formProps) => {
             title,
             description
         }
-        props.addIdea(newIdea)
+        dispatch(addIdea(newIdea))
         clearInputs()
     }
 
