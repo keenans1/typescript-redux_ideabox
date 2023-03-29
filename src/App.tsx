@@ -26,9 +26,9 @@ const App = () => {
     }
   }, [fetching])
 
-  const addIdea = (newIdea: any): void => {
-    dispatch(setIdeas([...ideas, newIdea]))
-  }
+  // const addIdea = (newIdea: any): void => {
+  //   dispatch(setIdeas(newIdea))
+  // }
 
   // const deleteIdea = (id: number): void => {
   //   const updatedIdeas: Object[] = ideas.filter((idea: { id: number, title: string, description: string }) => idea.id !== id)
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Idea Box</h1>
-      <Form addIdea={addIdea} name='adam'/>
+      <Form />
       <Library />
     </div>
   )
