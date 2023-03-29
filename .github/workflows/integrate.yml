@@ -6,7 +6,7 @@ on:
 
 jobs: 
   test_pull_request: 
-    runs-on: ubuntu-ltest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@2
       - uses: actions/setup-nod@v1
