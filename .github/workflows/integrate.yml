@@ -12,14 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-    - name: clean cache
-      run: npm cache clean --force
-    - name: install
-      run: npm ci
-    - name: npm install
-      run: npm install
-    - name: build
-      run: npm run test --if-present
-      env:
-        CI: false
-
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+    
